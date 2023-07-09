@@ -1,0 +1,46 @@
+import { Svg, Rect, G, Text } from "react-native-svg";
+
+const Legend = ({ colorScale }) => {
+  const domain = colorScale.domain();
+
+  const itemWidth = 15;
+  const itemHeight = 15;
+
+  const gap = 20;
+
+  // Map the domain to a list of {color, label} objects
+  const items = domain.map((d, i) => ({
+    color: colorScale(d),
+    label: i === 0 ? "0" : `${d - 1}-${d}`,
+  }));
+  const legendWidth = 200;
+  const legendHeight = 400;
+
+  return (
+    <Svg
+      width={legendWidth}
+      height={legendHeight}
+      transform={`translate(100, 0)`}
+    >
+      <Text
+        x={legendWidth / 2}
+        y={gap / 2}
+        textAnchor="middle"
+        fill="white"
+        fontWeight="bold"
+      >
+        Incident Count
+      </Text>
+      {items.map((item, i) => (
+        <G key={i}>
+          <Rect width={itemWidth} height={itemHeight} fill={item.color} />
+          <Text textAnchor="left" fill="white">
+            {item.label}
+          </Text>
+        </G>
+      ))}
+    </Svg>
+  );
+};
+
+export default Legend;

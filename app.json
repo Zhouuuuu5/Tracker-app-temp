@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "owner": "1 thing org",
+    "name": "Asian Hate Crime Tracker",
+    "slug": "1thing",
+    "version": "1.2.0",
+    "orientation": "portrait",
+    "icon": "",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "",
+      "resizeMode": "contain",
+      "backgroundColor": "#fff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "buildNumber": "20",
+      "infoPlist": {},
+      "bundleIdentifier": "com.hatecrimetracker"
+    },
+    "android": {
+      "userInterfaceStyle": "automatic",
+      "adaptiveIcon": {
+        "foregroundImage": "",
+        "backgroundColor": "#000000"
+      },
+      "package": "com.hatecrimetracker",
+      "versionCode": 20
+    },
+    "web": {
+      "favicon": ""
+    },
+    "plugins": [
+      [
+        "expo-tracking-transparency",
+        {
+          "userTrackingPermission": "This identifier will be used to deliver personalized ads to you."
+        }
+      ]
+    ]
+  }
+}
